@@ -61,7 +61,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: rgb(0, 191, 255); /* DEBUG */
 }
 
 #logo {
@@ -97,10 +96,6 @@ nav a:hover {
   header > nav {
     flex-direction: column;
   }
-}
-
-main > section {
-    background: rgb(0, 255, 187); /* DEBUG */
 }
 
 #hero {
@@ -184,7 +179,6 @@ h1 {
 }
 
 footer {
-    background: rgba(183, 255, 0, 0.5); /* DEBUG */
     display:flex;
     justify-content: space-evenly;
 }
