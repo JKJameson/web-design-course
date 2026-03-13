@@ -1,0 +1,25 @@
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('../fonts/NotoSans-Regular.woff2') format('woff2'),
+        url('../fonts/NotoSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Noto Sans';
+    font-size: 16px;
+}
+
+header {
+    padding: 20px;
+}
+
+header nav {
+    
+}
+
+#logo {
+    float: left;
+}
