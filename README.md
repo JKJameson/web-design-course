@@ -7,10 +7,29 @@ Accessible at: https://jkjameson.github.io/web-design-course/
 - [x] Initial sketch
 
 ## Stage 2: Home page work
-![Home page work](images/progress/002-homepage.png)
+![Home](images/progress/002-homepage.png)
 - [ ] Logo
 - [x] Navigation
 - [x] Hero Section
 - [ ] Teaser Cards
 - [ ] Footer
+
+## Stage 3: Home page progression
+![Home](images/progress/003-homepage.png)
+- [x] Logo (Disclaimer: I used Google's Gemini Nano Banana AI to generate the SVG logo)
+- [x] Navigation
+- [x] Hero Section
+- [ ] Teaser Cards
+- [x] Footer
+
+## Stage 4: Home page progression
+![Home](images/progress/004-homepage.png)
+- [x] Logo
+- [x] Navigation
+- [x] Hero Section
+- [X] Teaser Cards
+- [x] Footer
+
+## Stage 5: Remove development colours
+![Home](images/progress/005-homepage.png)
 

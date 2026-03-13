@@ -6,17 +6,18 @@
     margin: 0;
 }
 
-/*
-    Theme Colours
-*/
 :root {
-  --nav-color: #6f6659;
-  --nav-text: #000000;
-  --primary-color: #3b577d;
-  --secondary-color: #45959f;
-  --hover-color: #163d61;
+    /* Theme Colours */
+    --nav-color: #6f6659;
+    --nav-text: #000000;
+    --primary-color: #3b577d;
+    --secondary-color: #45959f;
+    --hover-color: #163d61;
 
-  --ct-padding: 20px;
+    /* Container Sizes */
+    --ct-max-width: 1000px;
+    --ct-padding: 20px;
+    --ct-max-width-without-padding: calc(var(--ct-max-width) + var(--ct-padding)*2); /* add the left & right padding */
 }
 
 @font-face {
@@ -51,7 +52,7 @@ body {
 }
 
 header, main > section, footer {
-    max-width: 1000px;
+    max-width: var(--ct-max-width);
     margin: auto;
     padding: var(--ct-padding);
 }
@@ -136,13 +137,71 @@ main > section {
     background-color: var(--secondary-color);
 }
 
-
 h1 {
     font-family: 'Bungee', sans-serif;
 }
 
-footer {
-    background: rgba(183, 255, 0, 0.5); /* DEBUG */
+.teasers {
+    padding: 0;
+    max-width: var(--ct-max-width-without-padding);
+
+    margin: var(--ct-padding) auto;
 }
 
+.teasers ul {
+    display:flex;
+    list-style: none;
+    justify-content: space-between;
+    text-align: center;
+}
 
+.teasers li {
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: var(--ct-padding);
+}
+
+.teasers p {
+    text-align: justify;
+    margin: 10px 0;
+}
+
+.teasers a {
+    display: inline-block;
+    font-family: 'Bungee', sans-serif;
+    text-decoration: none;
+    color: var(--primary-color);
+    padding:10px;
+    margin: 10px;
+    border: 1px solid #000; 
+    border-radius: 10px;
+    background: #67c4d0;
+}
+
+.teasers a:hover {
+    background:rgb(0, 191, 255);
+    color: var(--secondary-color);
+}
+
+footer {
+    background: rgba(183, 255, 0, 0.5); /* DEBUG */
+    display:flex;
+    justify-content: space-evenly;
+}
+
+footer ul {
+    display: flex;
+    list-style: none;
+}
+
+footer li {
+    margin: 0 10px;
+}
+
+footer a {
+    color: #000;
+}
+footer a:hover {
+    color: #464646;
+    text-decoration: none;
+}
