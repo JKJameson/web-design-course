@@ -15,12 +15,23 @@
   --primary-color: #3b577d;
   --secondary-color: #45959f;
   --hover-color: #163d61;
+
+  --ct-padding: 20px;
 }
 
 @font-face {
     font-family: 'Noto Sans';
     src: url('../fonts/NotoSans-Regular.woff2') format('woff2'),
         url('../fonts/NotoSans-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Bungee';
+    src: url('../fonts/Bungee-Regular.woff2') format('woff2'),
+        url('../fonts/Bungee-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -42,7 +53,7 @@ body {
 header, main > section, footer {
     max-width: 1000px;
     margin: auto;
-    padding: 20px;
+    padding: var(--ct-padding);
 }
 
 header {
@@ -89,6 +100,45 @@ nav a:hover {
 
 main > section {
     background: rgb(0, 255, 187); /* DEBUG */
+}
+
+#hero {
+    text-align: center;
+    padding: 60px var(--ct-padding);
+    border: 2px solid #000000;
+    border-radius: 25px;
+
+    background: #EEAECA;
+    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
+
+#hero p {
+    margin-top: var(--ct-padding);
+    font-size: 1.5em;
+}
+
+#hero-links {
+    margin-top: var(--ct-padding);
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#hero-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1.2em;
+}
+
+#hero-links a:hover {
+    background-color: var(--secondary-color);
+}
+
+
+h1 {
+    font-family: 'Bungee', sans-serif;
 }
 
 footer {
