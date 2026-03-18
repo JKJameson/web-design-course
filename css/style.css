@@ -156,6 +156,28 @@ nav a:hover {
     color: #000 !important;
 }
 
+/*
+ * Using class for content, because we can have multiple generic blocks of content
+ */
+.content {
+    text-align: justify;
+    padding: 60px var(--ct-padding);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--card-bg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.content p {
+    margin-top: var(--ct-padding);
+    font-size: 1.2em;
+    color: var(--text-secondary);
+}
+
+.content-spacer {
+    height: var(--ct-padding / 2);
+}
+
 h1 {
     font-family: "Bungee", sans-serif;
 }
