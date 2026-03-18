@@ -8,50 +8,60 @@
 
 :root {
     /* Theme Colours */
-    --nav-color: #6f6659;
-    --nav-text: #000000;
-    --primary-color: #3b577d;
-    --secondary-color: #45959f;
-    --hover-color: #163d61;
+    --bg-color: #f8fafc;
+    --card-bg: #ffffff;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --accent-primary: #059669; /* Emerald Green */
+    --accent-secondary: #1d4ed8; /* Strong Blue */
+    --border-color: #e2e8f0;
 
     /* Container Sizes */
     --ct-max-width: 1000px;
     --ct-padding: 20px;
-    --ct-max-width-without-padding: calc(var(--ct-max-width) + var(--ct-padding)*2); /* add the left & right padding */
+    --ct-max-width-without-padding: calc(
+        var(--ct-max-width) + var(--ct-padding) * 2
+    ); /* add the left & right padding */
 }
 
 @font-face {
-    font-family: 'Noto Sans';
-    src: url('../fonts/NotoSans-Regular.woff2') format('woff2'),
-        url('../fonts/NotoSans-Regular.woff') format('woff');
+    font-family: "Noto Sans";
+    src:
+        url("../fonts/NotoSans-Regular.woff2") format("woff2"),
+        url("../fonts/NotoSans-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'Bungee';
-    src: url('../fonts/Bungee-Regular.woff2') format('woff2'),
-        url('../fonts/Bungee-Regular.woff') format('woff');
+    font-family: "Bungee";
+    src:
+        url("../fonts/Bungee-Regular.woff2") format("woff2"),
+        url("../fonts/Bungee-Regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
     font-display: swap;
 }
 
-html, body {
-    height: 100vh;  /* Use viewport height */
-    overflow:auto;  /* Prevents scrollbars initially, also prevents overscrolling on MacOS (shows white background) */
+html,
+body {
+    height: 100vh; /* Use viewport height */
+    overflow: auto; /* Prevents scrollbars initially, also prevents overscrolling on MacOS (shows white background) */
     box-sizing: border-box;
 }
 
 body {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: "Noto Sans", sans-serif;
     font-size: 16px;
-    background: linear-gradient(-180deg, #BCC5CE 0%, #929EAD 98%), radial-gradient(at top left, rgba(255,255,255,0.30) 0%, rgba(0,0,0,0.30) 100%);
+    background: var(--bg-color);
+    color: var(--text-primary);
     height: 100%;
 }
 
-header, main > section, footer {
+header,
+main > section,
+footer {
     max-width: var(--ct-max-width);
     margin: auto;
     padding: var(--ct-padding);
@@ -72,45 +82,44 @@ nav ul {
     list-style-type: none;
 }
 
-nav li { 
+nav li {
     display: block;
     padding: 1em;
-    color: white;
 }
 
 nav a {
-    color: var(--nav-text);
+    color: var(--text-primary);
     font-weight: bold;
     text-decoration: none;
     letter-spacing: 0.1em;
 }
 
 nav a:hover {
-    color: var(--secondary-color);
+    color: var(--accent-secondary);
 }
 
 /*
     On smaller screens, move the logo above on it's own line
 */
 @media screen and (min-width: 390px) and (max-width: 767px) {
-  header > nav {
-    flex-direction: column;
-  }
+    header > nav {
+        flex-direction: column;
+    }
 }
 
 #hero {
     text-align: center;
     padding: 60px var(--ct-padding);
-    border: 2px solid #000000;
-    border-radius: 25px;
-
-    background: #EEAECA;
-    background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--card-bg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
 #hero p {
     margin-top: var(--ct-padding);
     font-size: 1.5em;
+    color: var(--text-secondary);
 }
 
 #hero-links {
@@ -121,65 +130,90 @@ nav a:hover {
 
 #hero-links a {
     text-decoration: none;
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    border-radius: 5px;
-    padding: 5px;
+    color: var(--accent-primary);
+    border: 1px solid var(--accent-primary);
+    border-radius: 6px;
+    padding: 10px 20px;
     font-size: 1.2em;
+    transition: all 0.2s ease;
 }
 
 #hero-links a:hover {
-    background-color: var(--secondary-color);
+    background-color: var(--accent-primary);
+    color: #ffffff;
+}
+
+#hero-risk-btn {
+    color: red;
+    border-color: orange;
+}
+#hero-risk-btn:hover {
+    background-color: pink !important;
+    color: #000 !important;
+    border-color: red !important;
+}
+#hero-risk-btn:hover span {
+    color: #000 !important;
 }
 
 h1 {
-    font-family: 'Bungee', sans-serif;
+    font-family: "Bungee", sans-serif;
 }
 
 .teasers {
     padding: 0;
     max-width: var(--ct-max-width-without-padding);
-
     margin: var(--ct-padding) auto;
 }
 
 .teasers ul {
-    display:flex;
+    display: flex;
     list-style: none;
     justify-content: space-between;
-    text-align: center;
+    gap: 20px;
 }
 
 .teasers li {
-    border: 2px solid #000;
-    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
     padding: var(--ct-padding);
+    background: var(--card-bg);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* ensures button pushes to bottom */
+}
+
+.teasers h2 {
+    text-align: left;
 }
 
 .teasers p {
-    text-align: justify;
-    margin: 10px 0;
+    text-align: left;
+    color: var(--text-secondary);
+    margin: 10px 0 20px 0;
 }
 
 .teasers a {
     display: inline-block;
-    font-family: 'Bungee', sans-serif;
+    align-self: flex-start;
+    font-family: "Bungee", sans-serif;
     text-decoration: none;
-    color: var(--primary-color);
-    padding:10px;
-    margin: 10px;
-    border: 1px solid #000; 
-    border-radius: 10px;
-    background: #67c4d0;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    background: var(--accent-primary);
+    transition: background-color 0.2s;
 }
 
 .teasers a:hover {
-    background:rgb(0, 191, 255);
-    color: var(--secondary-color);
+    background: lightslategray;
 }
 
 footer {
-    display:flex;
+    display: flex;
     justify-content: space-evenly;
 }
 
@@ -192,10 +226,16 @@ footer li {
     margin: 0 10px;
 }
 
+footer p,
 footer a {
-    color: #000;
+    color: var(--text-secondary);
 }
-footer a:hover {
-    color: #464646;
+
+footer a {
     text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
 }

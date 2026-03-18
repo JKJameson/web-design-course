@@ -33,3 +33,5 @@ Accessible at: https://jkjameson.github.io/web-design-course/
 ## Stage 5: Remove development colours
 ![Home](images/progress/005-homepage.png)
 
+## Stage 6: Implement colour scheme
+![Home](images/progress/006-homepage.png)
