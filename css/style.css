@@ -98,12 +98,41 @@ nav a:hover {
     color: var(--accent-secondary);
 }
 
+#navfocus {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.25;
+    display:none;
+    cursor: pointer;
+}
+
+#hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 3em;
+}
+
 /*
     On smaller screens, move the logo above on it's own line
 */
-@media screen and (min-width: 390px) and (max-width: 767px) {
-    header > nav {
+@media screen and (max-width: 950px) {
+    header > nav ul {
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%); /* fix the positioning to account for own dimentions */
         flex-direction: column;
+        background:white;
+        min-width: 200px;
+        border: 1px solid #000;
+    }
+    #hamburger {
+        display: inline-block;
     }
 }
 
