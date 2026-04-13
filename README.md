@@ -35,3 +35,6 @@ Accessible at: https://jkjameson.github.io/web-design-course/
 
 ## Stage 6: Implement colour scheme
 ![Home](images/progress/006-homepage.png)
+
+## Stage 7: Polish
+![Home](images/progress/007-homepage.png)
