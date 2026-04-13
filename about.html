@@ -3,12 +3,13 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="description" content="About StockIntro - our origins and where to find us." />
+        <meta name="description" content="About StockIntro - our mission, who we are, and where to find us." />
         <meta name="keywords" content="stock trading,intro to stock trading,about,about us" />
-        <title>StockInto - About</title>
+        <title>StockIntro - About</title>
         <link rel="preload" href="fonts/NotoSans-Regular.woff2" as="font" type="font/woff2" crossorigin />
         <link rel="preload" href="fonts/Bungee-Regular.woff2" as="font" type="font/woff2" crossorigin />
         <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/about.css" />
         <script src="js/site.js"></script>
     </head>
     <body>
@@ -31,30 +32,115 @@
             <span id="hamburger" onClick="toggleNavMenu()">&#8801;</span>
         </header>
         <main>
+
+            <!-- Mission -->
             <section class="content">
-                <h1>About</h1>
-                <p>This is an academic project.</p>
+                <h1>About StockIntro</h1>
+                <p>StockIntro is an educational website built to make stock market investing accessible to everyone. No finance degree required.</p>
+
+                <div class="about-mission">
+                    <div class="about-mission-item">
+                        <span class="about-mission-icon">&#127891;</span>
+                        <h3>Learn</h3>
+                        <p>Clear, jargon-free guides covering everything from what a stock is to how to read a candlestick chart.</p>
+                    </div>
+                    <div class="about-mission-item">
+                        <span class="about-mission-icon">&#128200;</span>
+                        <h3>Grow</h3>
+                        <p>Practical how-to guides and curated resources so you can go from reading to actually doing it.</p>
+                    </div>
+                    <div class="about-mission-item">
+                        <span class="about-mission-icon">&#128737;</span>
+                        <h3>Stay Safe</h3>
+                        <p>Honest coverage of risks, emotional pitfalls, and fees. Informed investors make better decisions.</p>
+                    </div>
+                </div>
             </section>
+
             <section class="content-spacer"></section>
+
+            <!-- Who we are -->
             <section class="content">
-                <h1>TODO</h1>
-                <ul>
-                    <li>
-                        Form for questions, site mission (beginner intro), author bio.                    </li>
-                    <li>
-                        Design: Minimal white/gray; Inter font (14px form labels); map if needed.                    </li>
-                    <li>
-                        Source: https://blog.hubspot.com/sales/investment-proposal                     </li>
-                </ul>
+                <h2 class="about-heading">Who We Are</h2>
+                <p>StockIntro is an academic project created as part of a Web Design module. It was built by a first-year student with a passion for making financial literacy more accessible.</p>
+                <p>This site is not affiliated with any broker, financial institution, or investment firm. No content on this site constitutes financial advice.</p>
+
+                <div class="about-stats">
+                    <div class="about-stat">
+                        <span class="about-stat-number">6</span>
+                        <span class="about-stat-label">Pages of content</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="about-stat-number">10+</span>
+                        <span class="about-stat-label">Key concepts explained</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="about-stat-number">16+</span>
+                        <span class="about-stat-label">Curated resources</span>
+                    </div>
+                    <div class="about-stat">
+                        <span class="about-stat-number">0</span>
+                        <span class="about-stat-label">Ads or affiliate links</span>
+                    </div>
+                </div>
             </section>
+
+            <section class="content-spacer"></section>
+
+            <!-- Contact / questions -->
+            <section class="content">
+                <h2 class="about-heading">Got a Question?</h2>
+                <p>Have a suggestion, spotted an error, or just want to get in touch? Fill in the form below and we'll get back to you.</p>
+
+                <form class="about-form" action="contact-thanks.html" method="GET">
+                    <div class="about-form-row">
+                        <div class="about-form-group">
+                            <label for="about-name">Name</label>
+                            <input type="text" id="about-name" name="name" placeholder="Your name" autocomplete="name" />
+                        </div>
+                        <div class="about-form-group">
+                            <label for="about-email">Email</label>
+                            <input type="email" id="about-email" name="email" placeholder="you@example.com" autocomplete="email" />
+                        </div>
+                    </div>
+                    <div class="about-form-group">
+                        <label for="about-message">Message</label>
+                        <textarea id="about-message" name="message" rows="5" placeholder="Your message..."></textarea>
+                    </div>
+                    <button type="submit" class="about-form-submit">Send Message &#8594;</button>
+                </form>
+            </section>
+
+            <section class="content-spacer"></section>
+
+            <!-- Find us -->
+            <section class="content">
+                <h2 class="about-heading">Find Us</h2>
+                <p>Our headquarters are located at a very well-known landmark. You can't miss it. If you make it back.</p>
+
+                <div class="about-map-wrap">
+                    <iframe
+                        title="StockIntro HQ, Bermuda Triangle"
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d3622855.4970531694!2d-67.5!3d25.0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sie!4v1712345678901"
+                        width="100%"
+                        height="400"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                <p class="about-map-caption">&#9651; StockIntro HQ, Bermuda Triangle, North Atlantic Ocean. <em>Ships and aircraft not included.</em></p>
+            </section>
+
         </main>
         <footer>
             <p>&copy;2026 StockIntro. All Rights Reserved.</p>
             <ul>
                 <li><a href="privacy.html">Privacy</a></li>
                 <li><a href="terms.html">Terms</a></li>
-                <li><a href="#">[Facebook]</a></li>
-                <li><a href="#">[Twitter/X]</a></li>
+                <li><a href="#"><img src="images/icons/facebook-color-svgrepo-com.svg" class="icon-24" alt="Facebook"></a></li>
+                <li><a href="#"><img src="images/icons/twitter-1-svgrepo-com.svg" class="icon-24" alt="Twitter / X"></a></li>
             </ul>
         </footer>
     </body>
