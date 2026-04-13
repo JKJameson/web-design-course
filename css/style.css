@@ -77,6 +77,8 @@ header {
 
 #logo {
     margin: 0 0 0 5px;
+    width: 320px;
+    height: 80px;
 }
 
 nav ul {
@@ -98,6 +100,12 @@ nav a {
 
 nav a:hover {
     color: var(--accent-secondary);
+}
+
+nav a.nav-active {
+    color: var(--accent-primary);
+    font-weight: bold;
+    border-bottom: 2px solid var(--accent-primary);
 }
 
 #navfocus {
@@ -419,4 +427,35 @@ footer a:hover {
     width: 100%;
     height: 100%;
     border: 0;
+}
+
+#scroll-bottom-btn {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid var(--accent-primary);
+    background: var(--card-bg);
+    color: var(--accent-primary);
+    font-size: 1.3em;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: background 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 200;
+}
+
+#scroll-bottom-btn:hover {
+    background: var(--accent-primary);
+    color: #ffffff;
+}
+
+@media screen and (max-width: 950px) {
+    #scroll-bottom-btn {
+        display: none;
+    }
 }

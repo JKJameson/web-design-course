@@ -27,12 +27,21 @@
     text-align: center;
 }
 
+.about-mission-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
 .about-mission-icon {
-    font-size: 2em;
+    font-size: 1.6em;
+    flex-shrink: 0;
 }
 
 .about-mission-item h3 {
-    margin: 10px 0 6px;
+    margin: 0;
 }
 
 .about-mission-item p {
@@ -143,6 +152,14 @@
 
 .about-form-submit:hover {
     background: #047857;
+}
+
+/* Find Us section background image */
+#about-find-us {
+    background-image: url('../images/logo.svg');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    background-size: 80px;
 }
 
 /* Map */

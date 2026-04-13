@@ -26,6 +26,18 @@ function resetNav() {
 }
 
 /*
+    Highlight the current page in the nav
+*/
+document.addEventListener("DOMContentLoaded", function () {
+    const currentPage = location.pathname.split("/").pop() || "index.html";
+    document.querySelectorAll("nav a").forEach(function (link) {
+        if (link.getAttribute("href") === currentPage) {
+            link.classList.add("nav-active");
+        }
+    });
+});
+
+/*
     Handle page resizing
 */
 window.addEventListener("resize", function() {
@@ -36,4 +48,18 @@ window.addEventListener("resize", function() {
 
         resetNav();
     }
+});
+
+/*
+    Scroll-to-bottom button (large screens only; hidden via CSS on small)
+*/
+document.addEventListener("DOMContentLoaded", function () {
+    var btn = document.createElement("button");
+    btn.id = "scroll-bottom-btn";
+    btn.setAttribute("aria-label", "Go to bottom of page");
+    btn.innerHTML = "&#8595;"; /* ↓ */
+    btn.addEventListener("click", function () {
+        document.querySelector("footer").scrollIntoView({ behavior: "smooth" });
+    });
+    document.body.appendChild(btn);
 });
