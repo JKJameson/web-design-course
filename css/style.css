@@ -280,8 +280,8 @@ nav a.nav-active {
     color: var(--text-secondary);
 }
 
-.content-spacer {
-    height: calc(var(--ct-padding) / 2);
+main > .content + .content {
+    margin-top: calc(var(--ct-padding) / 2);
 }
 
 #newsletter {
