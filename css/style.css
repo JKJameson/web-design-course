@@ -241,6 +241,22 @@ nav a.nav-active {
     height: 32px;
 }
 
+.basics-info-icon img,
+.about-mission-icon img,
+.howto-research-icon img,
+.risks-pitfall-icon img,
+.concepts-dividend-icon img,
+.res-card-icon img {
+    width: 1em;
+    height: 1em;
+}
+
+.icon-inline {
+    width: 1.2em;
+    height: 1.2em;
+    vertical-align: middle;
+}
+
 /*
  * Using class for content, because we can have multiple generic blocks of content
  */
