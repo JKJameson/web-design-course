@@ -40,7 +40,7 @@
     flex-shrink: 0;
 }
 
-.about-mission-item h3 {
+.about-mission-item h2 {
     margin: 0;
 }
 
@@ -163,6 +163,11 @@
 }
 
 /* Map */
+.about-map-wrap iframe {
+    width: 100%;
+    display: block;
+}
+
 .about-map-wrap {
     margin-top: 20px;
     border-radius: 8px;
